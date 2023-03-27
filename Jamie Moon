@@ -1,1 +1,7 @@
-
+while True:
+    word = input("Enter a word: ")
+    if word.lower() == "crush":
+        print("zayree")
+        break
+    else:
+        print("Sorry, I didn't understand. Please try again.")

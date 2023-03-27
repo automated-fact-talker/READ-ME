@@ -1,0 +1,8 @@
+import git
+
+url = "https://github.com/automated-fact-talker/READ-ME.git"
+local_dir = "./READ-ME"
+
+repo = git.Repo.clone_from(url, local_dir)
+
+print("Repository cloned successfully.")

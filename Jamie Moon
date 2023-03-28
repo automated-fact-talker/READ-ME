@@ -1,6 +1,5 @@
 import random
 mode = "normal"
-
 while True:
     word = input("Enter a word: ")
     if word.lower() == "crush":
@@ -11,11 +10,6 @@ while True:
                 print("who?")
             else:
                 print("did i ask?")
-        elif mode == "sport":
-            if random.random() < 0.5:
-                print("My favorite sport is basketball!")
-            else:
-                print("I don't really have a favorite sport.")
         else:
             print("Invalid mode.")
     elif word.lower() == "hello":
@@ -28,13 +22,6 @@ while True:
                 print("did i ask")
             else:
                 print("Hey, how's it going?")
-        elif mode == "sport":
-            if random.random() < 0.3:
-                print("Hi! Do you like sports?")
-            elif random.random() < 0.6:
-                print("Hello! What's your favorite sport?")
-            else:
-                print("Hey there! What sports have you been playing lately?")
         else:
             print("Invalid mode.")
     elif word.lower() == "how are you?":
@@ -45,13 +32,6 @@ while True:
                 print("your mum")
             else:
                 print("did i ask?")
-        elif mode == "sport":
-            if random.random() < 0.4:
-                print("I'm doing great! Just finished playing some basketball.")
-            elif random.random() < 0.8:
-                print("I'm feeling pretty good. I've been running a lot lately.")
-            else:
-                print("I'm a little sore, but that's just because I've been playing a lot of tennis.")
         else:
             print("Invalid mode.")
     elif word.lower() == "what is your name?":
@@ -62,11 +42,6 @@ while True:
                 print("My name is Jamie, my love.")
             else:
                 print("My name is changxi, im not that dumb")
-        elif mode == "sport":
-            if random.random() < 0.5:
-                print("My name is Sporty Spice! Just kidding, it's still Automated-Facts-Talker.")
-            else:
-                print("My name is Auto the Athlete! Just kidding, it's still Automated-Facts-Talker.")
         else:
             print("Invalid mode.")
     elif word.lower() == "what time is it?":
@@ -79,10 +54,16 @@ while True:
                 print("10:45!")
             else:
                 print("I'm sorry, I dind ask")
-        elif mode == "sport":
-            if random.random() < 0.5:
-                print("It's game time!")
-            else:
-                print("Time to hit the gym!")
         else:
             print("Invalid mode.")
+    elif word.lower() == "jamie mode":
+        mode = "jamie"
+        print("Jamie mode activated!")
+    elif word.lower() == "normal mode":
+        mode = "normal"
+        print("Normal mode activated!")
+    elif word.lower() == "quit":
+        print("Goodbye!")
+        break
+    else:
+        print("Sorry, I didn't understand. Please try again.")

@@ -1,0 +1,88 @@
+import random
+import time
+
+mode = "normal"
+
+while True:
+    word = input("Enter a word: ")
+
+    if word.lower() == "crush":
+        if mode == "normal":
+            print("zayree")
+        elif mode == "jamie":
+            if random.random() < 0.7:
+                print("who?")
+            else:
+                print("did i ask?")
+        elif mode == "sports":
+            if random.random() < 0.2:
+                print("MISS MISS MISS")
+            else:
+                print("MISS MISS " + "MISS " * int(time.time() % 10))
+        else:
+            print("Invalid mode.")
+    
+    elif word.lower() == "hello":
+        if mode == "normal":
+            print("Hi there!")
+        elif mode == "jamie":
+            if random.random() < 0.2:
+                print("Helo")
+            elif random.random() < 0.8:
+                print("did i ask")
+            else:
+                print("Hey, how's it going?")
+        elif mode == "sports":
+            print("MISS MISS MISS")
+        else:
+            print("Invalid mode.")
+    
+    elif word.lower() == "how are you?":
+        if mode == "normal":
+            print("I'm doing well, thank you for asking.")
+        elif mode == "jamie":
+            if random.random() < 0.6:
+                print("your mum")
+            else:
+                print("did i ask?")
+        elif mode == "sports":
+            print("MISS MISS MISS")
+        else:
+            print("Invalid mode.")
+    
+    elif word.lower() == "what is your name?":
+        if mode == "normal":
+            print("My name is Automated-Facts-Talker.")
+        elif mode == "jamie":
+            if random.random() < 0.7:
+                print("My name is Jamie, my love.")
+            else:
+                print("My name is changxi, im not that dumb")
+        elif mode == "sports":
+            print("MISS MISS MISS")
+        else:
+            print("Invalid mode.")
+    
+    elif word.lower() == "what time is it?":
+        if mode == "normal":
+            print(time.strftime("It's %I:%M %p."))
+        elif mode == "jamie":
+            if random.random() < 0.5:
+                print("time for you to get a watch")
+            else:
+                print(time.strftime("It's %I:%M %p."))
+        elif mode == "sports":
+            print("MISS MISS MISS")
+        else:
+            print("Invalid mode.")
+    
+    elif word.lower() == "change mode":
+        new_mode = input("Enter new mode (normal, jamie, sports): ")
+        if new_mode.lower() in ["normal", "jamie", "sports"]:
+            mode = new_mode.lower()
+            print("Mode changed to", mode)
+        else:
+            print("Invalid mode.")
+    
+    else:
+        print("Invalid input.")
